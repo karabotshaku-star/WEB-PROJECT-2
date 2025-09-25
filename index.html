@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karabo Beauty Cosmetics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: skyblue;">
+<!--Header Section-->
+<header>
+                <img src="assets/logo.png" alt="Karabo Beauty Essentials Logo" width="700" height="700" />
+                <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+               <li><a href="./pages/about.html">About Us</a></li>
+               <li><a href="./pages/contact.html">Contact Us</a></li>
+               </ul>
+               </nav>
+</header>
+<main>
+    <section>
+<h1 style="text-align:center; color:blueviolet">
+Welcome to Karabo Beauty Cosmetics</h1>
+<p style="font-size: large;">
+
+        Our company offers a comprehensive range of services designed to meet the diverse
+        needs of customers
+
+        </p>
+    </section>
+
+    <section>
+        <img src="assets/product1.jpg" alt="main" width="650" height="650">
+        <figcaption>
+            <h3>Cleansing Balm</h3>
+        </figcaption>
+        </section>
+
+        <section>
+            <img src="assets/Product6.avif" alt="main" width="650" height="650">
+            <figcaption>
+                <h3>LipStick</h3>
+            </figcaption>
+        </section>
+
+        <section>
+        <img src="assets/product2.jpg" alt="main" width="650" height="650">
+        <figcaption>
+            <h3>Blush Brushes</h3>
+        </figcaption>
+        </section>
+
+        <section>
+        <img src="assets/product4.jpg" alt="main" width="650" height="650">
+        <figcaption>
+            <h3>Face Creams</h3>
+        </figcaption>
+        </section>
+
+        <section>
+        <img src="assets/product5.png" alt="main" width="650" height="650">
+        <figcaption>
+            <h3>Toners</h3>
+        </figcaption>
+    </section>
+    
+</main>
+</html>
+
+Beauty Cosmetics brings you the best of Irish homegrown beauty, amazing niche brands, along with dedicated support, reviews, and help to choose the right products for you.
+
+
+</div>
+</section>
+
+<section>
+    <aside>
+        <h3>Quick Info</h3>
+        <ul>
+            <li>Polokwane (IvyPark), South Africa</li>
+            <li>Open:Mon-Sat, 9AM-3PM</li>
+            <li>Phone: 076 015 9956</li>
+        </ul>
+    </aside>
+</section>
+
+
+<section>
+<h2>Customer reviews</h2>
+<div id="reviews" class="grid"></div>
+<form id="reviewForm" style="margin-top:1rem">
+<h3>Add your review</h3>
+<label>
+Name
+<input type="text" id="revName" required />
+</label>
+<label>
+Rating (1‑5)
+<input type="number" id="revStars" min="1" max="5" required />
+</label>
+<label>
+Comment
+<textarea id="revText" required></textarea>
+</label>
+<button class="btn primary" type="submit">Submit Review</button>
+</form>
+</section>
+</main>
+
+
+<footer>
+<div class="container">© 2025 Karabo Beauty Cosmetics • Made in SA</div>
+</footer>
+
+
+<script>
+// Simple localStorage reviews
+const list = document.getElementById('reviews');
+const form = document.getElementById('reviewForm');
+const storeKey = 'kbe_reviews_v1';
+const render = () => {
+const data = JSON.parse(localStorage.getItem(storeKey) || '[]');
+list.innerHTML = '';
+if (!data.length) { list.innerHTML = '<p class="small">No reviews yet. Be the first!</p>'; return; }
+data.forEach(r => {
+const el = document.createElement('div');
+el.className = 'review';
+el.innerHTML = `<strong>${r.name}</strong> · <span class="stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</span><p>${r.text}</p>`;
+list.appendChild(el);
+});
+};
+form.addEventListener('submit', e => {
+e.preventDefault();
+const name = document.getElementById('revName').value.trim();
+const stars = parseInt(document.getElementById('revStars').value, 10);
+const text = document.getElementById('revText').value.trim();
+if (!name || !text || !(stars >=1 && stars <=5)) return alert('Please complete all fields with a valid rating.');
+const data = JSON.parse(localStorage.getItem(storeKey) || '[]');
+data.push({ name, stars, text });
+localStorage.setItem(storeKey, JSON.stringify(data));
+form.reset();
+render();
+});
+render();
+</script>
+</body>
+</html>
