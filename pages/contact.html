@@ -1,77 +1,144 @@
-
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us - Karabo Beauty Cosmetics</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Karabo Beauty Cosmetics</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-<body style="background-color: aqua;">
-    <header>
-        <img src="../assets/logo.png" alt="logo" width="700" height="700">
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About us</a>
-            <a href="contact.html">Contact us</a>
-        </nav>
-    </header>
+<body>
+  <header>
+    <img src="../assets/logo.png" alt="Logo" width="200" height="150">
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </header>
 
-    <main>
-      <!--Business Info-->
-        <h1>Contact Us:</h1>
-        <table>
-            <tr>
-                <td width="100">Telephone Number</td>
-                <td width="200">(o11)-545-6666</td>
-            </tr>
-            <tr>
-                <td width="100">Physical Address</td>
-                <td width="100">9 thyme street (ivy park),<br/>0690</td>
-            </tr>
-            <tr>
-                <td width="100">WhatsApp</td>
-                <td width="100">0760159976</td>
-            </tr>
-            <tr>
-                <td width="100">Email Address</td>
-                <td width="100"><a href="karabo:info@karabobeautycosmetics.co.za">Email us..</td>
-            </tr>
-            <tr>
-              <td width="100">Business Hours</td>
-              <td width="100"> Mon-Sat:9AM - 3PM</td>
-            </tr>
-        </table>
-        <section>
+  <main>
+    <h1>Contact Us</h1>
+    <table>
+      <tr><td>Telephone:</td><td>(011)-545-6666</td></tr>
+      <tr><td>Address:</td><td>9 Thyme Street, Ivy Park, 0690</td></tr>
+      <tr><td>WhatsApp:</td><td>0760159976</td></tr>
+      <tr><td>Email:</td><td><a href="mailto:info@karabobeautycosmetics.co.za">Email us...</a></td></tr>
+      <tr><td>Business Hours:</td><td>Mon-Sat: 9AM - 3PM</td></tr>
+    </table>
+
     <section>
-        <h1>Enquiries</h1>
-        <form action="" method="post">
-            <table>
-                <tr>
-                    <td width="150">Name</td>
-                    <td><input type="text" name="name" placeholder="Enter your name" required></td>
-                </tr>
-            </tr>
-            <tr>
-                <td width="150">Email</td>
-                <td><input type="email" name="email" placeholder="Enter your email" required></td>
-            </tr>
-            <tr>
-                <td width="150">Message:</td>
-                    <td>
-                        <textarea cols="25" rows="5" required></textarea>
-                    </td>
-            </tr>
-            <tr>
-                <td width="150"></td>
-                <td><input type="submit" name="button" value="submit"></td>
-            </tr>
-            </table>
-        </form>
+      <h2>Enquiries</h2>
+      <form action="mailto:info@karabobeautycosmetics.co.za" method="post" class="contact-form" onsubmit="return validateForm()">
+        <table>
+          <tr>
+            <td width="150">Name:</td>
+            <td><input type="text" name="name" id="name" placeholder="Enter your name"></td>
+          </tr>
+          <tr>
+            <td width="150">Surname:</td>
+            <td><input type="text" name="surname" id="surname" placeholder="Enter your surname"></td>
+          </tr>
+          <tr>
+            <td width="150">Email:</td>
+            <td><input type="email" name="email" id="email" placeholder="Enter your email"></td>
+          </tr>
+          <tr>
+            <td width="150">Enquiry Type:</td>
+            <td>
+              <select name="enquiry" id="enquiry">
+                <option value="">-- Select an option --</option>
+                <option value="Product">Product</option>
+                <option value="Order">Order</option>
+                <option value="Feedback">Feedback</option>
+                <option value="General">General</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td width="150">Message:</td>
+            <td><textarea cols="25" rows="5" id="message"></textarea></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><p class="error" id="errorMessage"></p></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" name="submit" value="Send Enquiry"></td>
+          </tr>
+        </table>
+      </form>
     </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 Karabo Beauty Cosmetics</p>
-    </footer>
+    <section class="map">
+  <h2>Find Us</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.0512680613188!2d29.447891674503268!3d-23.923238578552787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d78fcec8cfa5%3A0x5da632393288a2c4!2s9%20Thyme%20St%2C%20Mypark%20X17%2C%20Polokwane%2C%200699!5e0!3m2!1sen!2sza!4v1763544963816!5m2!1sen!2sza" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Karabo Beauty Cosmetics</p>
+    <div class="socials">
+      <a href="https://facebook.com/karabobeauty" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/karabobeauty" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="timestamp" id="time"></div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Form Validation
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const surname = document.getElementById('surname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const enquiry = document.getElementById('enquiry').value;
+      const message = document.getElementById('message').value.trim();
+      const errorMessage = document.getElementById('errorMessage');
+      errorMessage.textContent = '';
+
+      if (!name || !surname || !email || !enquiry || !message) {
+        errorMessage.textContent = 'All fields including enquiry type are required!';
+        return false;
+      }
+
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!email.match(emailPattern)) {
+        errorMessage.textContent = 'Incorrect email format!';
+        return false;
+      }
+
+      alert("Your enquiry was submitted successfully!");
+      return true;
+    }
+
+    // Timestamp
+    function displayTime() {
+      const now = new Date();
+      let h = String(now.getHours()).padStart(2, '0');
+      let m = String(now.getMinutes()).padStart(2, '0');
+      let s = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById("time").textContent = h + ":" + m + ":" + s;
+    }
+    setInterval(displayTime, 1000);
+    displayTime();
+  </script>
 </body>
 </html>
