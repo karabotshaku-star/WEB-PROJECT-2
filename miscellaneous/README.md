@@ -52,3 +52,9 @@ W3Schools (2024) *CSS Tutorial*.Available at:https://w3schools.cpm/css/ (Accesse
 freeCodeCamp (2024) *Responsive Web Design Basics*. Available at: https://www.freecodecamp.org/news/responsive-web-design/ (Accessed: 21 September 2025)
 
 
+## Browser Support
+This website has been tested on:
+- Google Chrome (latest)
+- Microsoft Edge
+- Mozilla Firefox
+- Safari

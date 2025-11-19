@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="keywords" content="Karabo Beauty, cosmetics, skincare, makeup, beauty products, natural beauty">
+<meta name="description" content="Karabo Beauty Cosmetics offers affordable, high-quality beauty and skincare products designed to empower confidence.">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Karabo Beauty Cosmetics</title>
@@ -37,6 +39,7 @@
       <p>We envision a future where beauty is inclusive, accessible, and environmentally responsible.</p>
     </div>
 
+   
     <!-- Product Gallery with Prices -->
     <button class="accordion">Our Products</button>
     <div class="panel">
@@ -61,6 +64,11 @@
           <img src="../assets/product5.png" alt="Toners" class="staff-img">
           <p>Toners<br>Price: R380</p>
         </div>
+         <!-- Product Search -->
+<section>
+  <h2>Search Products</h2>
+  <input type="text" id="searchBar" placeholder="Search for a product..." onkeyup="searchProducts()">
+</section>
       </div>
       <div id="lightbox"><img id="lightboxImage" src=""></div>
     </div>
@@ -132,3 +140,18 @@
   </script>
 </body>
 </html>
+<script>
+  function searchProducts() {
+    const input = document.getElementById('searchBar').value.toLowerCase();
+    const products = document.querySelectorAll('#productGallery .staff-member');
+
+    products.forEach(product => {
+      const name = product.getAttribute('data-name').toLowerCase();
+      if (name.includes(input)) {
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  }
+</script>
