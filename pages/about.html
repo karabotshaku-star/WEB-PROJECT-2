@@ -86,6 +86,37 @@
         <div class="staff-member">
           <img src="../assets/memb2.jpg" alt="Marketing Lead" class="staff-img">
           <p>Jane Doe<br>Marketing Lead</p>
+          <main>
+  <h1>About Karabo Beauty Cosmetics</h1>
+
+  <!-- Search bar hook -->
+  <section>
+    <h2>Search Products</h2>
+    <input type="text" id="searchBar" placeholder="Search for a product...">
+  </section>
+
+  <!-- Product gallery with data-name hooks -->
+  <div class="staff-container" id="productGallery">
+    <div class="staff-member" data-name="Cleansing Balm">
+      <img src="../assets/product1.jpg" alt="Cleansing Balm" class="staff-img">
+      <p>Cleansing Balm<br>Price: R80</p>
+    </div>
+    <div class="staff-member" data-name="Lipstick">
+      <img src="../assets/product3.jpg" alt="Lipstick" class="staff-img">
+      <p>Lipstick<br>Price: R50</p>
+    </div>
+    <!-- Repeat for other products -->
+  </div>
+
+  <!-- Lightbox hook -->
+  <div id="lightbox"><img id="lightboxImage" src=""></div>
+</main>
+
+<footer>
+  ...
+  <!-- Timestamp clock hook -->
+  <div class="timestamp" id="time"></div>
+</footer>
         </div>
       </div>
     </div>
@@ -140,6 +171,7 @@
     setInterval(displayTime, 1000);
     displayTime();
   </script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
 <script>

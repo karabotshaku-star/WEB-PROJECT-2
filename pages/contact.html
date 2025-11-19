@@ -69,6 +69,27 @@
           <tr>
             <td></td>
             <td><input type="submit" name="submit" value="Send Enquiry"></td>
+            <form action="mailto:info@karabobeautycosmetics.co.za" method="post" class="contact-form">
+  <table>
+    <tr><td>Name:</td><td><input type="text" id="name"></td></tr>
+    <tr><td>Surname:</td><td><input type="text" id="surname"></td></tr>
+    <tr><td>Email:</td><td><input type="email" id="email"></td></tr>
+    <tr><td>Enquiry Type:</td>
+      <td>
+        <select id="enquiry">
+          <option value="">-- Select an option --</option>
+          <option value="Product">Product</option>
+          <option value="Order">Order</option>
+          <option value="Feedback">Feedback</option>
+          <option value="General">General</option>
+        </select>
+      </td>
+    </tr>
+    <tr><td>Message:</td><td><textarea id="message" rows="5"></textarea></td></tr>
+    <tr><td></td><td><p class="error" id="errorMessage"></p></td></tr>
+    <tr><td></td><td><input type="submit" value="Send Enquiry"></td></tr>
+  </table>
+</form>
           </tr>
         </table>
       </form>
@@ -96,6 +117,36 @@
       <a href="https://instagram.com/karabobeauty" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
     <div class="timestamp" id="time"></div>
+    <main>
+  <!-- Date stamp hook -->
+  <div id="datestamp"></div>
+
+  <h1>Welcome to Karabo Beauty Cosmetics</h1>
+  ...
+</main>
+
+<footer>
+  <p>&copy; 2025 Karabo Beauty Cosmetics</p>
+  ...
+  <!-- Timestamp clock hook -->
+  <div class="timestamp" id="time"></div>
+  <main>
+  <!-- Date stamp hook -->
+  <div id="datestamp"></div>
+
+  <h1>Welcome to Karabo Beauty Cosmetics</h1>
+  ...
+</main>
+
+<footer>
+  <p>&copy; 2025 Karabo Beauty Cosmetics</p>
+  ...
+  <!-- Timestamp clock hook -->
+  <div class="timestamp" id="time"></div>
+</footer>
+
+</footer>
+
   </footer>
 
   <script>
@@ -142,5 +193,6 @@
     setInterval(displayTime, 1000);
     displayTime();
   </script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
