@@ -1,69 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Karabo Beauty Cosmetics</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Karabo Beauty Cosmetics</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-<body style="background-color: palevioletred;">
-<header>
-    <img src="../assets/logo.png" alt="Karabo Beauty Essentials" width="700" height=700">
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html"> Contact Us</a>
+<body>
+  <header>
+    <img src="../assets/logo.png" alt="Logo" width="200" height="150">
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
-</header>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </header>
 
-<main>
+  <main>
     <h1>About Karabo Beauty Cosmetics</h1>
-    <section>
-        <p>Beauty Cosmetics brings you the best of Irish homegrown beauty, amazing niche brands,
-        along with dedicated support, reviews, and help to choose the right products for you. </p>
-        <p>We beleive in innovation, creativity, and results-driven sulutions for our clients</p>
-        <p>Our team is made up of passionate proffesionals who thrive on challenges
-             and love delivering good service to customers</p>
-             <figure>
-             <img src="../assets/product1.jpg" alt="out team" width="550" height="550">
-             <fig caption>
-                <h3>Cleansing Balm</h3>
-                <p>Price: R80</p>
-                </fig>
-                </figure>
-                <figure>
-             <img src="../assets/product2.jpg" alt="our team" width="550" height="550">
-             <figcaption>
-                <h3>Blush Brushes</h3>
-                <p>Price: R100</p>
-                </figcaption>
-                </figure>
-                <figure>
-                    <img src="../assets/Product6.avif" alt="our team" width="550" height="550">
-                    <figcaption>
-                        <h3>LipStick</h3>
-                        <p>Price: R50</p>
-                    </figcaption>
-                </figure>
-                <figure>
-             <img src="../assets/product4.jpg" alt="Our team" width="550" height="550">
-             <figcaption>
-                <h3>Face Creams</h3>
-                <p>Price: R250</p>
-                </figcaption>
-                </figure>
-                <figure>
-             <img src="../assets/product5.png" alt="Our team" width="450" height="450">
-             <figcaption>
-                <h3>Toners</h3>
-                <p>Price: R380</p>
-                </figcaption>
-                </figure>
 
-    </section>
-</main>
+    <!-- Accordion Sections -->
+    <button class="accordion">Background</button>
+    <div class="panel">
+      <p>Karabo Beauty Cosmetics was founded with a passion for natural beauty and self-expression. We aim to provide affordable, high-quality products that celebrate individuality.</p>
+    </div>
 
-<footer>
-    <p></p>&copy; 2025 Karabo Beauty Cosmetics</p>
-</footer>
+    <button class="accordion">Our Mission</button>
+    <div class="panel">
+      <p>Our mission is to empower people through beauty by offering safe, sustainable, and innovative cosmetics.</p>
+    </div>
+
+    <button class="accordion">Our Vision</button>
+    <div class="panel">
+      <p>We envision a future where beauty is inclusive, accessible, and environmentally responsible.</p>
+    </div>
+
+    <!-- Product Gallery with Prices -->
+    <button class="accordion">Our Products</button>
+    <div class="panel">
+      <div class="staff-container">
+        <div class="staff-member">
+          <img src="../assets/product1.jpg" alt="Cleansing Balm" class="staff-img">
+          <p>Cleansing Balm<br>Price: R80</p>
+        </div>
+        <div class="staff-member">
+          <img src="../assets/product2.jpg" alt="Blush Brushes" class="staff-img">
+          <p>Blush Brushes<br>Price: R100</p>
+        </div>
+        <div class="staff-member">
+          <img src="../assets/product6.avif" alt="Lipstick" class="staff-img">
+          <p>Lipstick<br>Price: R50</p>
+        </div>
+        <div class="staff-member">
+          <img src="../assets/product4.jpg" alt="Face Creams" class="staff-img">
+          <p>Face Creams<br>Price: R250</p>
+        </div>
+        <div class="staff-member">
+          <img src="../assets/product5.png" alt="Toners" class="staff-img">
+          <p>Toners<br>Price: R380</p>
+        </div>
+      </div>
+      <div id="lightbox"><img id="lightboxImage" src=""></div>
+    </div>
+
+    <!-- Team Section -->
+    <button class="accordion">Meet Our Team</button>
+    <div class="panel">
+      <div class="staff-container">
+        <div class="staff-member">
+          <img src="../assets/member1.jpg" alt="Founder" class="staff-img">
+          <p>Karabo Shaku<br>Founder</p>
+        </div>
+        <div class="staff-member">
+          <img src="../assets/member2.jpg" alt="Marketing Lead" class="staff-img">
+          <p>Jane Doe<br>Marketing Lead</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Karabo Beauty Cosmetics</p>
+    <div class="socials">
+      <a href="https://facebook.com/karabobeauty" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/karabobeauty" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="timestamp" id="time"></div>
+  </footer>
+
+  <script>
+    // Hamburger Menu
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Accordion
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(button => {
+      button.addEventListener("click", () => {
+        const panel = button.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+
+    // Lightbox
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImage");
+    document.querySelectorAll(".staff-img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+      });
+    });
+    lightbox.addEventListener("click", () => lightbox.style.display = "none");
+
+    // Timestamp
+    function displayTime() {
+      const now = new Date();
+      let h = String(now.getHours()).padStart(2, '0');
+      let m = String(now.getMinutes()).padStart(2, '0');
+      let s = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById("time").textContent = h + ":" + m + ":" + s;
+    }
+    setInterval(displayTime, 1000);
+    displayTime();
+  </script>
 </body>
 </html>
